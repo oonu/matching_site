@@ -20,10 +20,19 @@
       </div>
       <div class="navbar-collapse collapse navbar-menu-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="#">link1</a></li>
-          <li><a href="#">link2</a></li>
-          <li><a href="#">link3</a></li>
+          <li><a href="#">ビジネス情報</a></li>
+          <li><a href="#">関連企業情報</a></li>
+          <li><a href="#">メンバー情報</a></li>
         </ul>
+        <p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to '登録情報編集', edit_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+        <% else %>
+          <%= link_to 'ユーザ登録', new_user_registration_path, :class => 'navbar-link' %> |
+          <%= link_to 'ログイン', new_user_session_path, :class => 'navbar-link' %>
+        <% end %>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#"></a></li>
         </ul>
