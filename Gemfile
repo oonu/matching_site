@@ -1,25 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails',     github: 'rails/rails'
-gem 'arel',      github: 'rails/arel'
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.0.3'
 
-# Use mysql as the database for Active Record
+# Use mysql2 as the database for Active Record
 gem 'mysql2'
 
-# Use edge version of sprockets-rails
-gem 'sprockets-rails', github: 'rails/sprockets-rails'
-
 # Use SCSS for stylesheets
-gem 'sass-rails', github: 'rails/sass-rails'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', github: 'rails/coffee-rails'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,3 +40,13 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'spring'
+end
+
+gem 'devise'
+gem 'nested_form'
