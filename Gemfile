@@ -51,3 +51,6 @@ end
 gem 'devise'
 gem 'nested_form'
 gem 'therubyracer'
+
+# bootstrap
+gem 'anjlab-bootstrap-rails', '~> 3.0.2.0', :require => 'bootstrap-rails'
