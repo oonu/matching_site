@@ -50,3 +50,4 @@ end
 
 gem 'devise'
 gem 'nested_form'
+gem 'therubyracer'
